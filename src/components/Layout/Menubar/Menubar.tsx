@@ -185,7 +185,7 @@ export const Menubar = () => {
             <div className='logout'>
                 <Link to='#' className='logout-link'>
                     {React.createElement(Logout)}
-                    <span className='logout-link-text'>Đăng xuất</span>
+                    <span className='logout-link-text'>Đăng Xuất</span>
                 </Link>
             </div>
       </Sider>

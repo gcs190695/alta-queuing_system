@@ -18,7 +18,7 @@ const MenuBarRoutes = [
       level: 1,
       paths: ['device'],
       pathName: 'device',
-      textDisplay: 'Thiết bị',
+      textDisplay: 'Thiết Bị',
       icon: Monitor,
       children: [],
       actionLinks: [
@@ -29,7 +29,7 @@ const MenuBarRoutes = [
       level: 1,
       paths: ['service'],
       pathName: 'service',
-      textDisplay: 'Dịch vụ',
+      textDisplay: 'Dịch Vụ',
       icon: Question,
       children: []
     },
@@ -38,7 +38,7 @@ const MenuBarRoutes = [
       level: 1,
       paths: ['progression'],
       pathName: 'progression',
-      textDisplay: 'Cấp số',
+      textDisplay: 'Cấp Số',
       icon: Stack,
       children: []
     },
@@ -47,7 +47,7 @@ const MenuBarRoutes = [
       level: 1,
       paths: ['report'],
       pathName: 'report',
-      textDisplay: 'Báo cáo',
+      textDisplay: 'Báo Cáo',
       icon: BarChart,
       children: []
     },
@@ -56,7 +56,7 @@ const MenuBarRoutes = [
       level: 1,
       paths: ['#'],
       pathName: '#',
-      textDisplay: 'Cài đặt hệ thống',
+      textDisplay: 'Cài Đặt Hệ Thống',
       icon: Setting,
       children: [
         {
@@ -64,7 +64,7 @@ const MenuBarRoutes = [
           level: 2,
           paths: ['role'],
           pathName: 'role',
-          textDisplay: 'Vai trò',
+          textDisplay: 'Vai Trò',
           icon: null,
           children: []
         },
@@ -73,7 +73,7 @@ const MenuBarRoutes = [
           level: 2,
           paths: ['account'],
           pathName: 'account',
-          textDisplay: 'Tài khoản',
+          textDisplay: 'Tài Khoản',
           icon: null,
           children: []
         },
@@ -82,7 +82,7 @@ const MenuBarRoutes = [
           level: 2,
           paths: ['log'],
           pathName: 'log',
-          textDisplay: 'Nhật ký người dùng',
+          textDisplay: 'Nhật Ký Người Dùng',
           icon: null,
           children: []
         }
