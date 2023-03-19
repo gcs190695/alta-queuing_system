@@ -1,0 +1,71 @@
+/* Orange/$-Orange-50 */
+$-orange-50: #fff2e7;
+/* Orange/$-Orange-100 */
+$-orange-100: #FFE3CD;
+/* Orange/$-Orange-200 */
+$-orange-200: #FFC89B;
+/* Orange/$-Orange-300 */
+$-orange-300: #ffac6a;
+/* Orange/$-Orange-400 */
+$-orange-400: #ff9138;
+/* Orange/$-Orange-500 */
+$-orange-500: #ff7506;
+/* Orange/$-Orange-600 */
+$-orange-600: #BF5805;
+
+/* Gray/$-gray-50 */
+$-gray-50: #EAEAEC;
+/* Gray/$-gray-100 */
+$-gray-100:#D4D4D7;
+/* Gray/$-gray-200 placeholder */
+$-gray-200: #a9a9b0;
+/* Gray/$-gray-300 */
+$-gray-300: #7e7d88;
+/* Gray/$-gray-400 Text */
+$-gray-400: #535261;
+/* Gray/$-gray-500 */
+$-gray-500: #282739;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+/* Font */
+
+/* 30/30 Bold */
+$-font-30-b: normal 700 30px/45px 'Nunito';
+
+/* 24/24 XLbold */
+$-font-24-xlb: normal 900 24px/36px 'Nunito';
+
+/* 24/24 XBold --- */
+$-font-24-xb: normal 800 24px/36px 'Nunito';
+
+/* 24/24 Bold */
+$-font-24-b: normal 700 24px/36px 'Nunito';
+
+/* 20/20 Bold */
+$-font-20-b: normal 700 20px/30px 'Nunito';
+
+/* 16/16 Bold */
+$-font-16-b: normal 700 16px/24px 'Nunito';
+
+/* 16/16 Semi */
+$-font-16-s: normal 600 16px/24px 'Nunito';
+
+/* 16/16 Reg */
+$-font-16-r: normal 400 16px/24px 'Nunito';
+
+/* 14/14 Bold */
+$-font-14-b: normal 700 14px/21px 'Nunito';
+
+/* 14/14 Lite Bold --- */
+$-font-14-lite-b: normal 600 14px/21px 'Nunito';
+
+/* 14/14 Reg */
+$-font-14-r: normal 400 14px/21px 'Nunito';
+
+/* 12/12 Reg */
+$-font-12-r: normal 400 12px/18px 'Nunito';
+
+* {
+  font-family: "Nunito";
+}

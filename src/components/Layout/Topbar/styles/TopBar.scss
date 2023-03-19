@@ -1,0 +1,11 @@
+@import '../../../styles/global';
+
+.topbar {
+  display: flex !important;
+  align-items: center !important; 
+  height: 88px !important;
+  padding: 24px !important;
+  background: rgba(255,255,255, 0.6) !important;
+  // Menu Bar Fixed --> Need to margin 200px
+  margin-inline-start: 200px;
+}

@@ -6,6 +6,7 @@ import { userRoleReducer } from "./userRoleReducer";
 import { userReducer } from "./userReducer";
 import { userActivityLogReducer } from "./userActivityLogReducer";
 import { reportReducer } from "./reportReducer";
+import { PathReducer } from "./global/PathReducer";
 
 export const reducers = combineReducers({
     devices: deviceReducer,
@@ -15,6 +16,7 @@ export const reducers = combineReducers({
     users: userReducer,
     userActivityLogs: userActivityLogReducer,
     reports: reportReducer,
+    paths: PathReducer
 })
 
 export type reducerTypes = ReturnType<typeof reducers>
