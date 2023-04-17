@@ -1,0 +1,12 @@
+@import '../../../../styles/global';
+
+.form-control {
+  .qs-form-item {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font: $-font-16-s !important;
+    color: $-gray-500 !important;
+  }
+}

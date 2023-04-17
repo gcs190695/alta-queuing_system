@@ -22,6 +22,27 @@ const MenuBarRoutes = [
       icon: Monitor,
       children: [],
       actionLinks: [
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['device', 'create'],
+          pathName: 'create device',
+          parentPaths: ['device']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['device', 'details'],
+          pathName: 'details device',
+          parentPaths: ['device']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['device', 'update'],
+          pathName: 'update device',
+          parentPaths: ['device']
+        },
       ]
     },
     {
@@ -31,7 +52,30 @@ const MenuBarRoutes = [
       pathName: 'service',
       textDisplay: 'Dịch vụ',
       icon: Question,
-      children: []
+      children: [],
+      actionLinks: [
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['service', 'create'],
+          pathName: 'create service',
+          parentPaths: ['service']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['service', 'details'],
+          pathName: 'details service',
+          parentPaths: ['service']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['service', 'update'],
+          pathName: 'update service',
+          parentPaths: ['service']
+        },
+      ]
     },
     {
       type: 'menuItem',
@@ -40,7 +84,23 @@ const MenuBarRoutes = [
       pathName: 'progression',
       textDisplay: 'Cấp số',
       icon: Stack,
-      children: []
+      children: [],
+      actionLinks: [
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['progression', 'create'],
+          pathName: 'create progression',
+          parentPaths: ['progression']
+        },
+        {
+          type: 'actionLink',
+          level: -1,
+          paths: ['progression', 'details'],
+          pathName: 'details progression',
+          parentPaths: ['progression']
+        },
+      ]
     },
     {
       type: 'menuItem',
@@ -66,7 +126,23 @@ const MenuBarRoutes = [
           pathName: 'role',
           textDisplay: 'Vai trò',
           icon: null,
-          children: []
+          children: [],
+          actionLinks: [
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['role', 'create'],
+              pathName: 'create role',
+              parentPaths: ['role']
+            },
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['role', 'update'],
+              pathName: 'update role',
+              parentPaths: ['role']
+            },
+          ]
         },
         {
           type: 'subMenuItem',
@@ -75,7 +151,23 @@ const MenuBarRoutes = [
           pathName: 'account',
           textDisplay: 'Tài khoản',
           icon: null,
-          children: []
+          children: [],
+          actionLinks: [
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['account', 'create'],
+              pathName: 'create account',
+              parentPaths: ['account']
+            },
+            {
+              type: 'actionLink',
+              level: -1,
+              paths: ['account', 'update'],
+              pathName: 'update account',
+              parentPaths: ['account']
+            },
+          ]
         },
         {
           type: 'subMenuItem',
