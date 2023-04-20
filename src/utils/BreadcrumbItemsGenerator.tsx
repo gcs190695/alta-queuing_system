@@ -4,7 +4,6 @@ import { useNavigate, NavigateOptions } from "react-router-dom"
 import { Button } from "antd"
 import { useLocation } from 'react-router-dom';
 
-/* Function: Generate Breadcrumb Based On Routes */
 export const BreadcrumbItemsGenerator = () => {
     // Read Current Path
     const paths = ReadPath()
