@@ -3,7 +3,8 @@ import { ReadAllFirebaseData } from './utils/ReadAllFirebaseData';
 import { MainLayout } from './components';
 import { useLocation } from 'react-router-dom';
 import { UpdatePath } from './utils/RUDPath';
-import './App.css';
+import 'antd/dist/reset.css'
+// import './App.css';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
 
   // Update Path
   const location = useLocation()
-  const pathSnippets = window.location.pathname === '/' ? ['/'] : location.pathname.split('/').filter((i) => i);
+  const pathSnippets = window.location.pathname === '/' ? ['/'] : location.pathname.split('/').filter((i:string) => i);
   UpdatePath(pathSnippets)
 
   return (

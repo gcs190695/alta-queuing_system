@@ -1,13 +1,82 @@
-import { Layout } from 'antd'
+import { Layout, Breadcrumb, Space, Button, Avatar, Dropdown, Typography } from 'antd'
+import { ArrowRight } from './TopbarIcons';
+import { BreadcrumbItemsGenerator } from '../../../utils/BreadcrumbItemsGenerator';
+import { Link } from 'react-router-dom';
+import { Notification } from './TopbarIcons/Notification';
+import { useSelector } from 'react-redux';
+import { reducerTypes } from '../../../state/reducers';
+import { ProgressionGrantedDateFormatter } from '../../../utils/FormatDate';
+import React from 'react';
+import profileImage from './images/profile.png'
+import type { MenuProps } from 'rc-menu';
+import type{ ProgressionType } from '../../../state/data_types';
 import './styles/TopBar.css'
 
 const { Header } = Layout
 
+type MenuItem = Required<MenuProps>['items'][number]
+
+function getItem(
+    label: React.ReactNode,
+    key?: React.Key | null,
+    icon?: React.ReactNode,
+    children?: MenuItem[],
+    style?: React.CSSProperties,
+    type?: 'group',
+): MenuItem {
+    return {
+        key,
+        icon,
+        children,
+        label,
+        type,
+        style,
+      } as MenuItem;
+}
+
 export const Topbar = () => {
+    const breadcrumbItems = BreadcrumbItemsGenerator()
+    const progressions = useSelector((state: reducerTypes) => state.progressions) as ProgressionType[]
+    // Dropdown Menu Items
+    const items: MenuItem[] = progressions.map((progression, index) => {
+        return getItem(
+            <Space direction='vertical' className='notification-item'>
+                <Typography.Title className='notification-item-title'>Người dùng: {progression.customer_name}</Typography.Title>
+                <Typography.Text className='notification-item-text'>Thời gian nhận số: {ProgressionGrantedDateFormatter('ngày', 'time', progression.grant_time)}</Typography.Text>
+                <div className='notification-item-divider'></div>
+            </Space>,
+            index
+        )
+    });
+
     return (
-        // ">"
         <Header className='topbar' >
-            <h1>TopBar</h1>
+            <Breadcrumb items={breadcrumbItems.map((item) => {
+                return {title: item}
+            })} separator={React.createElement(ArrowRight)} className='qs-breadcrumb' />
+            
+            {/* If location is '/' (DashBoard) then we'll fixed topbar right side */}
+            <Space className={window.location.pathname === '/' ? 'topbar-right-side-fixed' : 'topbar-right-side'} size='large'>
+                <div id='notification'>
+                    {/* Offset X = ((360 - 32 (button)) / 2) - 86, Offset Y = 27 */}
+                    <Dropdown align={{ offset: [78, 27] }} placement='bottom' menu={{ items }} trigger={['click']} onOpenChange={(isOpen) => {
+                        // console.log(isOpen)
+                    }} getPopupContainer={(trigger) => document.getElementById('notification')!} >
+                        <Button className='notification-btn' type='text' shape='circle' icon={React.createElement(Notification)} onClick={(e) => {
+                            // console.log(e)
+                        }} />
+                    </Dropdown>
+                </div>
+                <Link to='/profile' className='profile'>
+                    <Space size='small'>
+                        <Avatar size={40} src={<img src={profileImage} alt='Profile' />} />
+                        <Space direction='vertical' className='profile-group'>
+                            <span className='profile-status'>Xin chào</span>
+                            <span className='profile-fullname'>Lê Quỳnh Ái Vân</span>
+                        </Space>
+                    </Space>
+                </Link>
+            </Space>
         </Header>
     );
 }

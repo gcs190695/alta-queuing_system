@@ -1,1 +1,5 @@
 export * from './Device'
+export * from './Create'
+export * from './Details'
+export * from './Update'
+export * from './Status'
