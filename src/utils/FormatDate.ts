@@ -21,10 +21,18 @@ export const DateAndTimeFormatter = (splitSymbol: string, order: 'time'| 'date',
   }
 }
 
+/* Progression Date Time Format */
+export const ProgressionGrantedDateFormatter = (splitSymbol: string, order: 'time'| 'date', datetime: Date, fullTime?: 'showFullTime') => {
+  // Format Time
+  const timeBase = datetime.toLocaleTimeString().split(':')
+  const time = `${fullTime === 'showFullTime' ? `${timeBase[0]}h${timeBase[1]}:${timeBase[2]}`: `${timeBase[0]}h${timeBase[1]}`}`
+
+  // Format Date
   const fixedDate = datetime.getDate() - 10 >= 0 ? datetime.getDate().toString() : `0${datetime.getDate()}`
   const fixedMonth = datetime.getMonth() - 10 >= 0 ? datetime.getMonth().toString() : `0${datetime.getMonth()}`
   const date = `${fixedDate}/${fixedMonth}/${datetime.getFullYear()}`
 
+  // Consider To Return Date, Time Format
   switch(order)
   {
     case 'time':
